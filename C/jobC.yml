@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: c
+  labels:
+    name: c
+    app: c
+spec:
+  template:
+    spec:
+      containers:
+      - name: c
+        image: micicdragan/pds_c
+      restartPolicy: Never
+  backoffLimit: 4
